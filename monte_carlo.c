@@ -37,7 +37,29 @@ int main(void) {
       abort();
     }
   }
+} 
+
+float mc_pi(int i ){ 
+  float x,y,z ; 
+  int squ = 0;
+  int cir = 0;
+  float pi; 
+  
+  while (i>0) { 
+    x = frandom() ;
+    y = frandom() ;
+    z = x*x + y*y ;
+    if (z<=1) { 
+      squ++; 
+      cir++;
+    } 
+    else { 
+      squ++; 
+    } 
+    i--; 
+  } 
+  pi = 4*(float)(cir)/squ;
+  reurn pi;
 }
-
-
+     
 
