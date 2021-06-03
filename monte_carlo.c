@@ -39,13 +39,15 @@ int main(void) {
   }
 } 
 
-float mc_pi(int i ){ 
-  float x,y,z ; 
+float mc_pi(int n ){ 
+  float x,y ; 
   int squ = 0;
   int cir = 0;
+  int i = 0;
+  float z;
   float pi; 
   
-  while (i>0) { 
+  while (i <n-1) { 
     x = frandom() ;
     y = frandom() ;
     z = x*x + y*y ;
@@ -54,10 +56,10 @@ float mc_pi(int i ){
       cir++;
     } 
     else { 
-      squ++; 
-    } 
-    i--; 
+      squ++;  
+    i++; 
   } 
+  }
   pi = 4*(float)(cir)/squ;
   reurn pi;
 }
