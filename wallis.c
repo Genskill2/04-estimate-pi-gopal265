@@ -33,7 +33,6 @@ float k=1.0;
         k *=(float)(4.*i*i)/(4.*i*i-1);
        }
 
-
   return (k*2);
 }
 
